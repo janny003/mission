@@ -43,52 +43,84 @@
       <p class="meta">버전 0.53.1 · Android · Windows · macOS 준비 중</p>
     </div>
 
-    <!-- A drawn preview of the month calendar, not a screenshot. -->
-    <div class="preview" aria-hidden="true">
-      <div class="phone">
-        <div class="phone-head">
-          <strong>11월</strong><span>Mission</span>
-        </div>
-        <div class="cal">
-          <span class="wd sun">일</span><span class="wd">월</span><span class="wd">화</span><span class="wd">수</span><span class="wd">목</span><span class="wd">금</span><span class="wd sat">토</span>
-        </div>
-        <div class="weeks">
-          <div class="week"><span>9</span><span>10</span><span>11</span><span>12</span><span class="today">13</span><span>14</span><span>15</span>
-            <i class="bar b1" style="--from:1;--to:4">설계 검토</i>
-            <i class="bar b2" style="--from:4;--to:6;--lane:1">고객사 미팅</i>
-          </div>
-          <div class="week"><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
-            <i class="bar b3" style="--from:2;--to:6">시험 일정</i>
-            <i class="bar b1 done" style="--from:2;--to:3;--lane:1">보고서</i>
-          </div>
-          <div class="week"><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
-            <i class="bar b2" style="--from:3;--to:7">릴리스 준비</i>
-          </div>
-        </div>
-        <div class="tasks">
-          <div class="task"><b>설계 검토</b><em class="dday soon">D-2</em></div>
-          <div class="task"><b>고객사 미팅 자료</b><em class="dday">D-5</em></div>
-          <div class="task"><b>주간 보고</b><em class="dday late">D+1</em></div>
-        </div>
-      </div>
+    <!-- Screens of the real app, captured with made-up sample projects. -->
+    <div class="shots" aria-label="Mission 화면">
+      <figure class="window">
+        <div class="window-bar"><i></i><i></i><i></i></div>
+        <img src="assets/screens/desktop_schedule.png" width="1920" height="1200"
+             alt="Windows의 Mission 일정 달력: 프로젝트별 색으로 여러 날 일정이 막대로 이어져 보인다">
+      </figure>
+      <figure class="handset">
+        <img src="assets/screens/phone_today.png" width="804" height="1748"
+             alt="휴대폰의 오늘 화면: 오늘의 미션 목록">
+      </figure>
     </div>
   </section>
 
   <section id="features" class="features">
     <h2>프로젝트를 하는 하루에 맞춘 기능</h2>
+
+    <div class="feature">
+      <div class="feature-text">
+        <p class="tag">작업 트래커</p>
+        <h3>마감까지 며칠 남았는지<br>한눈에 보여요</h3>
+        <p>작업마다 담당자, 기한, 우선순위, 유형을 정리하고 기한 옆 D-day로 마감을 챙겨요.
+          지난 기한은 빨강, 3일 이내는 주황으로 표시돼요. 상태별 보기와 '내 작업' 보기도 있어요.</p>
+      </div>
+      <figure class="window">
+        <div class="window-bar"><i></i><i></i><i></i></div>
+        <img src="assets/screens/desktop_tasks.png" width="1920" height="1200" loading="lazy"
+             alt="작업 트래커 표: 작업명, 상태, 담당자, 기한과 D-day, 우선순위">
+      </figure>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <p class="tag">프로젝트 관리</p>
+        <h3>미진행 · 진행 중 · 완료를<br>보드로 옮겨요</h3>
+        <p>프로젝트별 작업을 카드 보드로 보고 끌어서 상태를 바꿔요.
+          이슈 트래킹, 프로젝트 일정, 참여 인력·공수, 비용 관리, 간트차트, 고객사 정보도 한 화면에서 열어요.</p>
+      </div>
+      <figure class="window">
+        <div class="window-bar"><i></i><i></i><i></i></div>
+        <img src="assets/screens/desktop_board.png" width="1920" height="1200" loading="lazy"
+             alt="프로젝트 관리 보드: 미진행, 진행 중, 완료 열에 작업 카드">
+      </figure>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <p class="tag">프로젝트 현황</p>
+        <h3>진행률과 예산을<br>숫자로 확인해요</h3>
+        <p>전체 프로젝트의 작업 완료율과 프로젝트별 예산 사용 현황을 모아 보고, 주간 보고서로 정리해요.</p>
+      </div>
+      <figure class="window">
+        <div class="window-bar"><i></i><i></i><i></i></div>
+        <img src="assets/screens/desktop_overview.png" width="1920" height="1200" loading="lazy"
+             alt="프로젝트 현황: 프로젝트 수, 작업 수, 완료율과 예산 사용 현황">
+      </figure>
+    </div>
+
+    <div class="feature reverse phone-feature">
+      <div class="feature-text">
+        <p class="tag">휴대폰에서도</p>
+        <h3>출근길에 오늘 할 일과<br>이번 달 일정을 봐요</h3>
+        <p>휴대폰과 PC에서 같은 프로젝트를 이어서 봐요. 홈 화면 위젯으로 앱을 열지 않고도
+          오늘의 미션과 이번 달 달력을 확인할 수 있어요.</p>
+      </div>
+      <div class="phones">
+        <figure class="handset">
+          <img src="assets/screens/phone_today.png" width="804" height="1748" loading="lazy"
+               alt="휴대폰 오늘 화면">
+        </figure>
+        <figure class="handset">
+          <img src="assets/screens/phone_schedule.png" width="804" height="1748" loading="lazy"
+               alt="휴대폰 일정 달력">
+        </figure>
+      </div>
+    </div>
+
     <div class="grid">
-      <article>
-        <h3>프로젝트 한눈에 보기</h3>
-        <p>프로젝트별 기간, 상태, 진행률을 개요 화면에서 확인하고 참여 인력·고객사·비용을 함께 정리해요.</p>
-      </article>
-      <article>
-        <h3>작업 트래커와 D-day</h3>
-        <p>담당자, 기한, 우선순위로 작업을 관리하고 기한 옆 D-day로 마감을 놓치지 않아요.</p>
-      </article>
-      <article>
-        <h3>여러 날 일정 달력</h3>
-        <p>여러 날 이어지는 일정을 막대로 보여 주고, 반복 일정·알림·공휴일을 지원해요.</p>
-      </article>
       <article>
         <h3>회의록</h3>
         <p>회의 내용을 기록·녹음하고 회사 Word(.docx)·한글(.hwpx) 양식에 채워 바로 보내요.</p>
@@ -98,8 +130,8 @@
         <p>명함을 찍으면 글자를 읽어 연락처를 채우고, 문자나 Outlook 연락처로 보내요.</p>
       </article>
       <article>
-        <h3>위젯</h3>
-        <p>휴대폰 홈 화면과 Windows 바탕화면에 오늘의 미션과 이번 달 달력을 띄워 둬요.</p>
+        <h3>바탕화면 위젯</h3>
+        <p>Windows 바탕화면에 오늘의 미션과 달력을 띄워 두고 크기와 불투명도를 조절해요.</p>
       </article>
     </div>
   </section>

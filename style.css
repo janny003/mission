@@ -49,8 +49,8 @@ code { font-size: .92em; background: var(--soft); padding: 1px 6px; border-radiu
 .top nav a:hover { color: var(--text); }
 
 .hero {
-  max-width: 1120px; margin: 0 auto; padding: 48px 20px 72px;
-  display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+  max-width: 1200px; margin: 0 auto; padding: 48px 20px 72px;
+  display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center;
 }
 .eyebrow { color: var(--blue); font-weight: 700; margin: 0 0 8px; }
 h1 { font-size: clamp(32px, 4.6vw, 52px); line-height: 1.2; margin: 0 0 18px; letter-spacing: -0.02em; }
@@ -67,46 +67,38 @@ h1 { font-size: clamp(32px, 4.6vw, 52px); line-height: 1.2; margin: 0 0 18px; le
 .btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
 .btn:hover { filter: brightness(1.06); }
 
-/* Drawn calendar preview */
-.preview { display: flex; justify-content: center; }
-.phone {
-  width: min(360px, 100%); background: var(--phone); border-radius: 28px; padding: 18px;
-  box-shadow: 0 30px 60px -20px rgba(37, 99, 235, .35), 0 0 0 1px var(--line);
+/* App screens in a window frame and a phone frame */
+figure { margin: 0; }
+.window {
+  border-radius: 14px; overflow: hidden; background: var(--card);
+  box-shadow: 0 30px 70px -28px rgba(37, 99, 235, .45), 0 0 0 1px var(--line);
 }
-.phone-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-.phone-head strong { font-size: 18px; }
-.phone-head span { color: var(--blue); font-weight: 700; font-size: 13px; }
-.cal, .week { display: grid; grid-template-columns: repeat(7, 1fr); }
-.wd { font-size: 11px; text-align: center; color: var(--muted); font-weight: 700; }
-.wd.sun { color: var(--red); }
-.wd.sat { color: var(--blue); }
-.week { position: relative; height: 64px; border-top: 1px solid var(--line); }
-.week span { font-size: 12px; font-weight: 700; padding: 3px 5px; }
-.week span:first-child { color: var(--red); }
-.week span:nth-child(7) { color: var(--blue); }
-.week .today {
-  justify-self: start; margin: 2px; width: 22px; height: 22px; padding: 0;
-  display: grid; place-items: center; border-radius: 50%; background: var(--blue); color: #fff;
+.window-bar { display: flex; gap: 6px; padding: 10px 12px; background: var(--soft); border-bottom: 1px solid var(--line); }
+.window-bar i { width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; }
+.window-bar i:first-child { background: #f87171; }
+.window-bar i:nth-child(2) { background: #fbbf24; }
+.window-bar i:nth-child(3) { background: #34d399; }
+.window img, .handset img { display: block; width: 100%; height: auto; }
+.handset {
+  border-radius: 30px; overflow: hidden; background: #0b1220; padding: 7px;
+  box-shadow: 0 24px 50px -18px rgba(15, 23, 42, .55);
 }
-.bar {
-  position: absolute; font-style: normal; font-size: 10.5px; font-weight: 700; color: #fff;
-  height: 16px; line-height: 16px; padding: 0 5px; border-radius: 4px; overflow: hidden; white-space: nowrap;
-  left: calc((var(--from) - 1) / 7 * 100% + 2px);
-  width: calc((var(--to) - var(--from) + 1) / 7 * 100% - 4px);
-  top: calc(24px + var(--lane, 0) * 18px);
+.handset img { border-radius: 24px; }
+
+.shots { position: relative; padding: 0 0 40px 0; }
+.shots .window { width: 100%; }
+.shots .handset { position: absolute; right: -16px; bottom: 0; width: 30%; }
+
+.feature {
+  display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center;
+  margin: 0 0 88px;
 }
-.b1 { background: #2563eb; }
-.b2 { background: #16a34a; }
-.b3 { background: #9333ea; }
-.bar.done { opacity: .45; text-decoration: line-through; }
-.tasks { margin-top: 12px; display: grid; gap: 6px; }
-.task {
-  display: flex; justify-content: space-between; align-items: center;
-  background: var(--soft); border-radius: 10px; padding: 8px 12px; font-size: 13px;
-}
-.dday { font-style: normal; font-weight: 800; color: var(--blue); }
-.dday.soon { color: var(--orange); }
-.dday.late { color: var(--red); }
+.feature.reverse .feature-text { order: 2; }
+.feature-text h3 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.35; margin: 0 0 14px; letter-spacing: -0.01em; }
+.feature-text p { color: var(--muted); margin: 0; font-size: 17px; }
+.feature-text .tag { color: var(--blue); font-weight: 800; font-size: 14px; margin-bottom: 8px; }
+.phones { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 520px; justify-self: center; }
+.phones .handset:last-child { transform: translateY(36px); }
 
 .features, .download { max-width: 1120px; margin: 0 auto; padding: 56px 20px; }
 h2 { font-size: clamp(24px, 3vw, 32px); margin: 0 0 28px; letter-spacing: -0.01em; }
@@ -139,6 +131,9 @@ footer a:hover { text-decoration: underline; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding-top: 24px; }
+  .feature, .feature.reverse { grid-template-columns: 1fr; gap: 24px; margin-bottom: 64px; }
+  .feature.reverse .feature-text { order: 0; }
+  .shots .handset { right: 0; width: 28%; }
   .grid { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
 }
