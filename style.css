@@ -121,6 +121,22 @@ summary { cursor: pointer; font-weight: 700; color: var(--text); }
 details p { margin-top: 8px; }
 .hash code { word-break: break-all; }
 .sync { color: var(--muted); margin-top: 22px; }
+.older {
+  margin-top: 36px; background: var(--card); border: 1px solid var(--line);
+  border-radius: 18px; padding: 22px;
+}
+.older h3 { margin: 0 0 8px; font-size: 18px; }
+.older > p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+.older table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.older th { text-align: left; color: var(--muted); font-weight: 700; font-size: 13px; }
+.older th, .older td { padding: 10px 8px; border-top: 1px solid var(--line); }
+.older td:last-child { text-align: right; }
+.older td a { color: var(--blue); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.older td a:hover { text-decoration: underline; }
+.older .note { display: block; color: var(--muted); font-size: 13px; }
+@media (max-width: 560px) {
+  .older th:nth-child(4), .older td:nth-child(4) { display: none; }
+}
 
 footer {
   max-width: 1120px; margin: 0 auto; padding: 28px 20px 40px;
