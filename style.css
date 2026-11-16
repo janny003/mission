@@ -113,6 +113,8 @@ h2 { font-size: clamp(24px, 3vw, 32px); margin: 0 0 28px; letter-spacing: -0.01e
 .download > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .btn.disabled { color: var(--muted); cursor: default; }
+.older-link { color: var(--blue); font-weight: 700; font-size: 14px; text-decoration: none; }
+.older-link:hover { text-decoration: underline; }
 .btn.disabled:hover { filter: none; }
 .card { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 .card p { flex: 1; }
