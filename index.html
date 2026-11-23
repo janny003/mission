@@ -168,10 +168,18 @@
           지울 때는 응용 프로그램 폴더에서 휴지통으로 옮겨요. 버전 0.56.0.</p>
         <a class="btn primary" href="downloads/macos/Mission-macOS.dmg" download>디스크 이미지 받기 (DMG, 34MB)</a>
         <details>
-          <summary>"열 수 없습니다" 창이 뜨면</summary>
-          <p>아직 Apple 공증을 받지 않아 처음 열 때 경고가 나올 수 있어요.
-            <b>완료</b>를 누른 뒤 <b>시스템 설정</b> → <b>개인정보 보호 및 보안</b>에서
-            <b>그래도 열기</b>를 누르면 실행돼요. 한 번만 하면 돼요.</p>
+          <summary>"'Mission'을(를) 열지 않음" 창이 뜨면</summary>
+          <p>아직 Apple 공증을 받지 않아 처음 열 때 이 경고가 나와요.
+            앱에는 문제가 없으니 <b>휴지통으로 이동</b>은 누르지 말고 <b>완료</b>를 눌러 주세요.
+            그다음 아래 두 방법 중 하나로 열 수 있어요. 한 번만 하면 돼요.</p>
+          <p><b>방법 1. 시스템 설정에서 허용</b><br>
+            <b>시스템 설정</b> → <b>개인정보 보호 및 보안</b>을 열고 아래로 내려
+            "'Mission'이(가) 차단되었습니다" 옆의 <b>그래도 열기</b>를 누른 뒤
+            암호나 Touch ID로 확인해요. 그리고 Mission을 다시 열어요.</p>
+          <p><b>방법 2. 터미널 명령</b><br>
+            Mission을 응용 프로그램 폴더로 옮긴 뒤 <b>터미널</b>(응용 프로그램 → 유틸리티)에
+            아래 명령을 붙여 넣고 Return을 눌러요. 그다음 Mission을 열어요.</p>
+          <p class="hash"><code>xattr -dr com.apple.quarantine /Applications/Mission.app</code></p>
           <p class="hash">SHA-256: <code>8afd92b3c58026918b57159f876674bfe814fcb5fa922792ae0e87a216110448</code></p>
         </details>
       </article>
